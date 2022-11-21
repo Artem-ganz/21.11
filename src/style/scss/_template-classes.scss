@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff-text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fs;
+    line-height: 28px;
+    color: $color-text;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}

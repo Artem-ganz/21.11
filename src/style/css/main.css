@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #16133D;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 22px 0;
+  margin: 0 0 100px;
+}
+.header .line {
+  position: absolute;
+  width: 1440px;
+  height: 0px;
+  left: 0px;
+  top: 80px;
+  border: 1px solid #EFEEF3;
+}
+
+.service-section .pseudo-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #7690A8;
+  margin: 0 0 15px;
+}
+.service-section h1 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.2px;
+  color: #16133D;
+  margin: 0 0 40px;
+}
+@media (min-width: 768px) {
+  .service-section .items-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .service-section .items-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 30px;
+    margin: 0 0 100px;
+  }
+}
+.service-section .item-1,
+.service-section .item-2,
+.service-section .item-3 {
+  display: block;
+  width: 370px;
+  height: 340px;
+  border: 1px solid #E5EAF4;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 0 0 30px;
+}
+.service-section .item-1:hover,
+.service-section .item-2:hover,
+.service-section .item-3:hover {
+  border: 2px solid #3DB370;
+}
+.service-section .item-1 .icon,
+.service-section .item-2 .icon,
+.service-section .item-3 .icon {
+  background-image: url("icons-sprite.svg");
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background-position: -6px -5px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  margin: 0 0 10px;
+}
+.service-section .item-1 .icon:hover,
+.service-section .item-2 .icon:hover,
+.service-section .item-3 .icon:hover {
+  background-position: -6px -64px;
+}
+.service-section .item-1 .text-holder h2,
+.service-section .item-2 .text-holder h2,
+.service-section .item-3 .text-holder h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  margin: 0 0 15px;
+}
+.service-section .item-1 .text-holder p,
+.service-section .item-2 .text-holder p,
+.service-section .item-3 .text-holder p {
+  margin: 0 0 30px;
+}
+.service-section .item-1 .text-holder .link,
+.service-section .item-2 .text-holder .link,
+.service-section .item-3 .text-holder .link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3DB370;
+}
+.service-section .item-1 .text-holder .link:hover,
+.service-section .item-2 .text-holder .link:hover,
+.service-section .item-3 .text-holder .link:hover {
+  font-size: 18px;
+}
+
+.footer {
+  background-color: #16133D;
+}
+.footer .container {
+  width: 100%;
+}
+.footer .logo-footer {
+  padding-top: 40px;
+  margin: 0 0 40px;
+}
+.footer .icons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+.footer .icons-list .icon-item {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 0 0 40px;
+}
+.footer .icons-list .icon {
+  font-size: 20px;
+}
+.footer .icons-list .icon:hover {
+  color: #3DB370;
+}

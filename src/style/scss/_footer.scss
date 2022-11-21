@@ -1,0 +1,35 @@
+
+.footer {
+    background-color: #16133D;
+
+    .container {
+        width: 100%;
+    }
+
+    .logo-footer {
+        padding-top: 40px;
+        margin: 0 0 40px;
+    }
+
+    .icons-list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    
+        .icon-item {
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            margin: 0 0 40px;
+        }
+    
+        .icon {
+            font-size: 20px;
+            &:hover {
+                color: #3DB370;
+            }
+        }
+    }
+}
+
